@@ -7,7 +7,7 @@ class NSFplug_Model
 public:
   xgm::NSF *sdat;           // データラッパへのポインタ
   xgm::NSFPlayer *pl;       // プレイヤーへのポインタ
-  xgm::NSFPlayerConfig *cf; // プレイヤーのコンフィグ情報
+  xgm::NSFPlayerConfigIni *cf; // プレイヤーのコンフィグ情報
 };
 
 class NSFplug_UI
@@ -20,7 +20,7 @@ public:
   };
   virtual ~NSFplug_UI(){}
   virtual xgm::NSFPlayer* GetPlayer()=0;
-  virtual xgm::NSFPlayerConfig* GetConfig()=0;
+  virtual xgm::NSFPlayerConfigIni* GetConfig()=0;
   virtual void SetPlayerWindow(HWND)=0;
   virtual void SetWA2InputModule(WA2InputModule *p)=0;
   virtual void OpenDialog(int id)=0;
@@ -96,7 +96,7 @@ public:
       return NULL;
   }
 
-  virtual xgm::NSFPlayerConfig* GetConfig()
+  virtual xgm::NSFPlayerConfigIni* GetConfig()
   {
     if(pUI) 
       return pUI->GetConfig();
