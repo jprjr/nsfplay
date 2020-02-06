@@ -4,6 +4,7 @@
 #include "resource.h"
 
 #include "nsfplug_ui.h"
+#include "nsfconfig_ini.h"
 #include "NSFDialog.h"
 #include "NSFEasyDialog.h"
 #include "NSFMemoryDialog.h"
@@ -42,7 +43,7 @@ public:
   NSFDialogManager(NSFplug_Model *, int mode);
   virtual ~NSFDialogManager();
   virtual NSFPlayer *GetPlayer(){ return pm->pl; }
-  virtual NSFPlayerConfig *GetConfig(){ return pm->cf; }
+  virtual ini::NSFPlayerConfig *GetConfig(){ return pm->cf; }
   virtual void UpdateNSFPlayerConfig(bool b);
   virtual void SetPlayerWindow(HWND hwnd);
   virtual void SetWA2InputModule(WA2InputModule *p){ wa2mod = p; }

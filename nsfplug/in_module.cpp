@@ -1,8 +1,6 @@
 #include "in_module.h"
 
-using namespace xgm;
-
-WA2InputModule::WA2InputModule(Player *p, PlayerConfig *c, SoundData *s) 
+WA2InputModule::WA2InputModule(xgm::Player *p, xgm::PlayerConfig *c, xgm::SoundData *s) 
   : pl(p), cf(c), sdat(s)
 {
   pl->SetConfig(cf);
@@ -285,17 +283,17 @@ void WA2InputModule::EQSet(int on, char data[10], int preamp)
 {
 }
 
-void WA2InputModule::SetPlayer(Player *p){ pl = p; }
+void WA2InputModule::SetPlayer(xgm::Player *p){ pl = p; }
 
-void WA2InputModule::SetPlayerConfig(PlayerConfig *p){ cf = p; }
+void WA2InputModule::SetPlayerConfig(xgm::PlayerConfig *p){ cf = p; }
 
-void WA2InputModule::SetSoundData(SoundData *s){ sdat = s; }
+void WA2InputModule::SetSoundData(xgm::SoundData *s){ sdat = s; }
 
-Player *WA2InputModule::GetPlayer(){ return pl; }
+xgm::Player *WA2InputModule::GetPlayer(){ return pl; }
 
-PlayerConfig *WA2InputModule::GetConfig(){ return cf; }
+xgm::PlayerConfig *WA2InputModule::GetConfig(){ return cf; }
 
-SoundData *WA2InputModule::GetSoundData(){ return sdat; }
+xgm::SoundData *WA2InputModule::GetSoundData(){ return sdat; }
 
 void WA2InputModule::QueueFile(const char *file)
 {

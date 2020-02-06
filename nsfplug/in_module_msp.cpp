@@ -1,7 +1,5 @@
 #include "in_module.h"
 
-using namespace xgm;
-
 WA2InputModuleMSP *WA2InputModuleMSP::_this;
 
 void WA2InputModuleMSP::GrabWinamp()
@@ -162,7 +160,7 @@ void WA2InputModuleMSP::Keep_Song(bool b)
   keep_song = b;
 }
 
-WA2InputModuleMSP::WA2InputModuleMSP(PlayerMSP *p, PlayerConfig *c, SoundDataMSP *s) 
+WA2InputModuleMSP::WA2InputModuleMSP(xgm::PlayerMSP *p, xgm::PlayerConfig *c, xgm::SoundDataMSP *s) 
   : pl(p), sdat(s), WA2InputModule(p,c,s)
 {
   memset(last_fn,0,512);

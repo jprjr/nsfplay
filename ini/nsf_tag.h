@@ -1,6 +1,9 @@
 #ifndef _NSF_TAG_H_
 #define _NSF_TAG_H_
-#include "../player/nsf/nsf.h"
+
+#include <windows.h>
+#include "../xgm/player/nsf/nsf.h"
+
 
 class NSF_TAG
 {
