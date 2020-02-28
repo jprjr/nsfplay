@@ -1,5 +1,6 @@
 #ifndef _VCM_UI_H_
 #define _VCM_UI_H_
+#include <cstdlib>
 
 namespace vcm
 {
